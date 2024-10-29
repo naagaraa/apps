@@ -1,13 +1,15 @@
-<script lang="ts">
-defineProps<{
-  msg: string
-  name: string
-}>()
-</script>
 <template>
-  <div class="bg-red-600 px-4 py-3 text-white">
-    <p class="text-center text-sm font-medium">
-      The PHP Scratchpad: Tinkerwell 4 is available now!
+  <div class="bg-lime-400 px-3 py-3 lg:px-5 lg:pl-3 text-white">
+    <p class="text-center text-black text-sm font-medium">
+      {{ props.message }}
     </p>
   </div>
 </template>
+<script setup lang="ts">
+
+interface props {
+  message?: string
+}
+
+const props = defineProps<props>()
+</script>

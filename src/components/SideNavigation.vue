@@ -1,16 +1,9 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-// Create a reactive reference for isActive
-const isVisible = ref(false);
-const minibar = ref(false);
-</script>
-
 <template>
     <aside id="logo-sidebar"
-        class="fixed left-0 z-40 w-56 h-screen pt-20 transition-transform -translate-x-full bg-black border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        class="fixed left-0 z-40 h-screen  transition-transform -translate-x-full bg-black border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         :class="[
-            isVisible ? 'top-8' : 'top-0',
-            minibar ? 'w-16' : 'w-56'
+            isVisible ? 'top-0' : 'top-0',
+            minibar ? 'w-16 pt-16' : 'w-56 pt-20'
         ]">
 
         <div
@@ -163,7 +156,7 @@ const minibar = ref(false);
                             class="w-4 h-4 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path
-                                d="M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z" />
+                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
                         </svg>
                         <span class="flex-1 ms-3 whitespace-nowrap text-sm" :class="[
                             minibar ? 'hidden' : ''
@@ -174,3 +167,15 @@ const minibar = ref(false);
         </div>
     </aside>
 </template>
+<script setup lang="ts">
+import { useSidebarStore } from '@/stores/useSidebarStore';
+import { computed } from 'vue';
+
+// Create a reactive reference for isActive
+const useSidebar = useSidebarStore()
+
+let isVisible = computed(() => useSidebar.isShow);
+let minibar = computed(() => useSidebar.isMinibar);
+
+console.log(isVisible, minibar);
+</script>
