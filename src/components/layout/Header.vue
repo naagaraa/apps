@@ -1,12 +1,21 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 import logo from "@/assets/logo.png"
 import TopNavigation from '@/components/TopNavigation.vue';
 import DropDownUser from '@/components/DropDownUser.vue';
 import SideBar from "@/components/SideNavigation.vue";
+
+const minibar = ref(false);
 </script>
 
 <template>
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+
+
+    <SideBar />
+    <nav :class="[
+        minibar ? 'left-16' : 'left-56'
+    ]" class="fixed right-0 top-0 z-50  bg-green-100 border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <!-- pengumuman -->
         <!-- <Announcement /> -->
         <!-- end pengumuman -->
@@ -23,13 +32,21 @@ import SideBar from "@/components/SideNavigation.vue";
                             </path>
                         </svg>
                     </button>
+                    <div class="text-center">
+                        <button
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                            type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                            aria-controls="drawer-navigation">
+                            Show navigation
+                        </button>
+                    </div>
                     <a href="#" class="flex ms-2 md:me-24">
                         <img :src="logo" class="h-8 me-3" alt="apps Logo" />
                         <span
                             class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
                     </a>
                 </div>
-                <TopNavigation />
+                <!-- <TopNavigation /> -->
                 <div class="flex items-center">
                     <div class="flex items-center ms-3">
                         <div>
@@ -48,5 +65,4 @@ import SideBar from "@/components/SideNavigation.vue";
             </div>
         </div>
     </nav>
-    <SideBar />
 </template>
