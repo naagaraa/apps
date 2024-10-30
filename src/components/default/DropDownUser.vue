@@ -11,7 +11,7 @@ const props = defineProps<props>()
 </script>
 
 <template>
-    <div class="z-50 hidden my-4 text-base list-none bg-slate-100 divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600 w-2/12"
+    <div class="z-50 hidden my-4 text-base list-none bg-slate-100 divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600  md:w-2/12"
         id="dropdown-user">
         <div class="px-4 py-3" role="none">
             <p class="text-sm text-gray-900 dark:text-white" role="none">

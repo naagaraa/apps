@@ -15,8 +15,8 @@
             </template>
         </Suspense>
         <!-- end pengumuman -->
-        <div class="px-3 py-3 lg:px-5 lg:pl-3">
-            <div class="flex flex-wrap items-center justify-between">
+        <div class="px-3  py-3 lg:px-5 lg:pl-3">
+            <div class="flex  flex-wrap md:items-center justify-between">
                 <TopLogoActive />
                 <TopNavigation />
                 <div v-if="isLoggin">
@@ -27,7 +27,6 @@
                 <div v-else>
                     <TopUserInactive />
                 </div>
-
             </div>
         </div>
     </nav>
@@ -50,11 +49,13 @@ import TopUserInactive from '@/components/default/TopUserInactive.vue';
 
 // State
 import { useSidebarStore } from '@/stores/useSidebarStore';
+import { useAnnouncementStore } from '@/stores/useAnnouncementStore';
 
 const useSidebar = useSidebarStore()
+const useAnnouncement = useAnnouncementStore()
 
 let minibar = computed(() => useSidebar.isMinibar);
-let isLoggin = ref(false)
-let announcement = ref(false)
+let isLoggin = ref(true)
+let announcement = computed(() => useAnnouncement.isShow);
 
 </script>
