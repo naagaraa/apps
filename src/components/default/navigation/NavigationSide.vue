@@ -137,16 +137,16 @@ const useSidebar = useSidebarStore()
 let isVisible = computed(() => useSidebar.isShow);
 let minibar = computed(() => useSidebar.isMinibar);
 
-const dropdowns = reactive({
+// Define a type for the dropdown keys
+type DropdownKeys = 'materi-bacaan' | 'kelas-saya';
+const dropdowns = reactive<Record<DropdownKeys, boolean>>({
     'materi-bacaan': false,
     'kelas-saya': false,
 });
 
 // Function to toggle dropdowns by key
-const toggleDropdown = (key) => {
+const toggleDropdown = (key: DropdownKeys) => {
     dropdowns[key] = !dropdowns[key];
-    console.log(key);
-
 };
 
 
