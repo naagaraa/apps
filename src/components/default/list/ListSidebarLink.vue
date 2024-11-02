@@ -2,18 +2,20 @@
     <li :class="[
         border ? 'border-t' : ''
     ]">
-        <a href="#"
+        <RouterLink :to="{
+            name: routeName
+        }"
             class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-900 dark:hover:bg-gray-700 group">
             <slot />
             <span class="flex-1 ms-3 whitespace-nowrap text-sm" :class="[
                 minibar ? 'hidden' : ''
             ]">{{ title }}</span>
-        </a>
+        </RouterLink>
     </li>
 </template>
 
 <script lang="ts" setup>
-import { computed, reactive } from 'vue';
+import { computed } from 'vue';
 import { useSidebarStore } from '@/stores/useSidebarStore';
 
 

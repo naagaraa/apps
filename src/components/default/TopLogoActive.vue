@@ -8,7 +8,7 @@
                     <IconToggle />
                 </button>
             </div>
-            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse ml-3">
+            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse ml-3">
                 <span class=" text-lime-400 self-center text-xl font-semibold sm:text-2xl whitespace-nowrap ">
                     UMERKA
                 </span>
@@ -20,12 +20,8 @@
 <script lang="ts" setup>
 import IconToggle from "@/components/default/icons/IconToggle.vue";
 import { useSidebarStore } from '@/stores/useSidebarStore';
-import { computed, ref } from 'vue';
-
 const useSidebar = useSidebarStore()
 
-let minibar = computed(() => useSidebar.isMinibar);
-let isLoggin = ref(false)
 </script>
 
 <style></style>

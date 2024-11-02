@@ -21,6 +21,5 @@ interface Props {
 
 const props = defineProps<Props>()
 
-// Destructure props for easier access in the template
-const { title, routeName } = props;
+
 </script>

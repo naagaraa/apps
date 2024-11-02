@@ -10,6 +10,8 @@ import BottomNavigation from '@/components/default/navigation/NavigationBottom.v
 onMounted(() => {
   initFlowbite();
 })
+
+
 </script>
 
 <template>

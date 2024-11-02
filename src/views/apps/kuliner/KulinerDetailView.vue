@@ -1,7 +1,8 @@
 <template>
-    <h1 class="font-bold mb-10">Help Center Detail</h1>
+    <h1 class="font-bold mb-10">Kuliner Detail</h1>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">
-        <p>help center detail</p>
+        <CardTravel />
+        <CardMateri title="SKD" category="CPNS,Kedinasan" />
     </div>
 </template>
 

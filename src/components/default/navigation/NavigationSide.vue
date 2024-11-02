@@ -8,31 +8,31 @@
         <div
             class="scrollbar-thin scrollbar-thumb-slate-500 scrollbar-track-slate-800 h-full px-3 pb-4 overflow-y-auto bg-black dark:bg-gray-800">
             <ul class="space-y-2 font-medium">
-                <ListSidebarLink title="Dashboard" :border='false'>
+                <ListSidebarLink title="Dashboard" route-name="web.home" :border='false'>
                     <IconDashboard />
                 </ListSidebarLink>
 
                 <!-- elearning saya -->
-                <ListSidebarLink title="Kelas Saya" :border='true'>
+                <ListSidebarLink title="Kelas Saya" route-name="apps.kelas.index" :border='true'>
                     <IconMylearning />
                 </ListSidebarLink>
-                <ListSidebarLink title="Materi Bacaan" :border='false'>
+                <ListSidebarLink title="Materi Bacaan" route-name="apps.materi.index" :border='false'>
                     <IconMateri />
                 </ListSidebarLink>
 
                 <!-- jobs dan event -->
-                <ListSidebarLink title="Event Saya" :border='false'>
+                <ListSidebarLink title="Event Saya" route-name="apps.event.index" :border='false'>
                     <IconMateri />
                 </ListSidebarLink>
-                <ListSidebarLink title="Kuliner & Destinasi" :border='false'>
+                <ListSidebarLink title="Kuliner & Destinasi" route-name="apps.kuliner.index" :border='false'>
                     <IconTravel />
                 </ListSidebarLink>
 
                 <!-- mini games -->
-                <ListSidebarLink title="Mini Games" :border='true'>
+                <ListSidebarLink title="Mini Games" route-name="apps.mini-games.index" :border='true'>
                     <IconMylearning />
                 </ListSidebarLink>
-                <ListSidebarLink title="Mini Quiz" :border='false'>
+                <ListSidebarLink title="Mini Quiz" route-name="apps.mini-quiz.index" :border='false'>
                     <IconMateri />
                 </ListSidebarLink>
 
@@ -40,7 +40,7 @@
                 <ListSidebarLink title="Lainnya" :border='true'>
                     <IconLainnya />
                 </ListSidebarLink>
-                <ListSidebarLink title="Help Center" :border='false'>
+                <ListSidebarLink title="Help Center" route-name="web.help-center.index" :border='false'>
                     <IconHelpCenter />
                 </ListSidebarLink>
             </ul>
