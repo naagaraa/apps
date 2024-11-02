@@ -1,9 +1,8 @@
 <template>
     <div v-if="isLoggin">
         <SideBar />
-        <nav :class="[
-            minibar ? 'left-0 sm:left-16' : 'left-0 sm:left-56'
-        ]" class="fixed right-0 top-0 z-50  bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <nav :class='classSidebarBase'
+            class="fixed right-0 top-0 z-50  bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
             <!-- pengumuman -->
             <Suspense>
                 <template #default>
@@ -90,5 +89,8 @@ const useAnnouncement = useAnnouncementStore()
 let minibar = computed(() => useSidebar.isMinibar);
 let isLoggin = ref(true)
 let announcement = computed(() => useAnnouncement.isShow);
+const classSidebarBase = computed(() => [
+    minibar.value ? 'left-0 sm:left-16' : 'left-0 sm:left-56'
+])
 
 </script>

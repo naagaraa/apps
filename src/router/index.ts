@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import HomeView from '@/views/apps/HomeView.vue'
 import NotFound from '@/views/error/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { 
-      path: '/:pathMatch(.*)*', 
-      name: 'NotFound', 
-      component: NotFound },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFound,
+    },
     {
       path: '/',
       name: 'web.home',
@@ -17,22 +18,22 @@ const router = createRouter({
     {
       path: '/news-letter',
       name: 'web.news-letter',
-      component: () => import('@/views/NewsLetterView.vue'),
+      component: () => import('@/views/apps/NewsLetterView.vue'),
     },
     {
       path: '/jobs',
       name: 'web.jobs',
-      component: () => import('@/views/JobsView.vue'),
+      component: () => import('@/views/apps/JobsView.vue'),
     },
     {
       path: '/event',
       name: 'web.event',
-      component: () => import('@/views/EventView.vue'),
+      component: () => import('@/views/apps/EventView.vue'),
     },
     {
       path: '/mercendise',
       name: 'web.mercendise',
-      component: () => import('@/views/Mercendise.vue'),
+      component: () => import('@/views/apps/Mercendise.vue'),
     },
 
     {

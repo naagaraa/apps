@@ -16,9 +16,7 @@
   </div>
 </template>
 <script setup lang="ts">
-
 import { useAnnouncementStore } from '@/stores/useAnnouncementStore';
-
 interface props {
   message?: string
 }
