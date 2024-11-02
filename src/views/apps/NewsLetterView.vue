@@ -1,10 +1,13 @@
 <template>
-  <h1 class="font-bold mb-10">News letters</h1>
+  <h1 class="font-bold mb-10">News Letters By Apps</h1>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">
-    <CardDefault />
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia porro neque eligendi quas consequuntur eius
+      repudiandae assumenda distinctio possimus rerum laboriosam nihil id maxime inventore tempora consequatur dolor,
+      veritatis natus!</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import CardDefault from '@/components/default/card/CardDefault.vue';
+import CardMateri from '@/components/default/card/CardMateri.vue';
+import CardTravel from '@/components/default/card/CardTravel.vue';
 </script>

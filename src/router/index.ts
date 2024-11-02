@@ -23,12 +23,12 @@ const router = createRouter({
     {
       path: '/jobs',
       name: 'web.jobs',
-      component: () => import('@/views/apps/JobsView.vue'),
+      component: () => import('@/views/apps/jobs/JobsView.vue'),
     },
     {
       path: '/event',
       name: 'web.event',
-      component: () => import('@/views/apps/EventView.vue'),
+      component: () => import('@/views/apps/event/EventView.vue'),
     },
     {
       path: '/mercendise',
