@@ -14,12 +14,11 @@
 
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router';
-interface Props {
+interface props {
     title?: string
     routeName?: string
 }
 
-const props = defineProps<Props>()
-
+const props = defineProps<props>()
 
 </script>

@@ -2,7 +2,7 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useAnnouncementStore = defineStore('announcement', () => {
-  let isShow = ref(true)
+  let isShow = ref(false)
 
   /**
    * show sidebar

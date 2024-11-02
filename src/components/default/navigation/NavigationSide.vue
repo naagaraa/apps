@@ -22,7 +22,7 @@
 
                 <!-- jobs dan event -->
                 <ListSidebarLink title="Event Saya" route-name="apps.event.index" :border='false'>
-                    <IconMateri />
+                    <IconEvent />
                 </ListSidebarLink>
                 <ListSidebarLink title="Kuliner & Destinasi" route-name="apps.kuliner.index" :border='false'>
                     <IconTravel />
@@ -59,6 +59,7 @@ import IconHelpCenter from '@/components/default/icons/IconHelpCenter.vue';
 import IconDashboard from '@/components/default/icons/IconDashboard.vue';
 import IconTravel from '@/components/default/icons/IconTravel.vue';
 import IconUdemy from '../icons/IconUdemy.vue';
+import IconEvent from '../icons/IconEvent.vue';
 
 // Create a reactive reference for isActive
 const useSidebar = useSidebarStore()
