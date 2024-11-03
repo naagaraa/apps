@@ -16,8 +16,8 @@
     // "moduleResolution": "Bundler",
     "types": ["node"],
     "noImplicitAny": false,
-    
-     "module": "ESNext",
+
+    "module": "ESNext",
     "moduleResolution": "node",
     "target": "ESNext",
     "strict": true,
@@ -27,7 +27,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": true
     // "allowJs": true,
   }
 }

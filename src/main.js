@@ -1,13 +1,17 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
+// motion
+import { MotionPlugin } from '@vueuse/motion'
+
 // swiper
 import { register } from 'swiper/element/bundle'
 
-// import 'bootstrap/dist/css/bootstrap-grid.min.css'
-// import 'bootstrap/dist/css/bootstrap-reboot.min.css'
-// import 'bootstrap'
+// calendar
+import VCalendar from 'v-calendar'
+import 'v-calendar/style.css'
 
+// app and router
 import App from './App.vue'
 import router from './router'
 
@@ -19,5 +23,7 @@ register()
 
 app.use(createPinia())
 app.use(router)
+app.use(VCalendar, {})
+app.use(MotionPlugin)
 
 app.mount('#app')

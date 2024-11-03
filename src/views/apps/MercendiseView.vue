@@ -33,5 +33,5 @@
     </div>
 </template>
 
-<script setup lang="js">
+<script lang="js" setup>
 </script>

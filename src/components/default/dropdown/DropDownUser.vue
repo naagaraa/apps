@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import ListDropdownUser from './list/ListDropdownUser.vue';
+import ListDropdownUser from '@/components/default/list/ListDropdownUser.vue';
 
 interface props {
     name?: string
