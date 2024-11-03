@@ -10,7 +10,7 @@
             </div>
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse ml-3">
                 <span class=" text-lime-400 self-center text-xl font-semibold sm:text-2xl whitespace-nowrap ">
-                    UMERKA
+                    <p class="md:hidden">UMERKA</p>
                 </span>
             </a>
         </div>
