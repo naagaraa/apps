@@ -126,6 +126,11 @@ const router = createRouter({
       name: 'apps.kuliner.show',
       component: () => import('@/views/apps/kuliner/KulinerDetailView.vue'),
     },
+    {
+      path: '/apps/profile/:id',
+      name: 'apps.profile.show',
+      component: () => import('@/views/apps/users/UserProfileView.vue'),
+    },
   ],
 })
 

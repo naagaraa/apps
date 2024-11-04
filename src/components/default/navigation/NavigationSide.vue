@@ -9,39 +9,39 @@
             class="scrollbar-thin scrollbar-thumb-slate-500 scrollbar-track-slate-800 h-full px-3 pb-4 overflow-y-auto bg-black dark:bg-gray-800">
             <ul class="space-y-2 font-medium">
                 <ListSidebarLink title="Dashboard" route-name="web.home" :border='false'>
-                    <IconDashboard />
+                    <IconDashboard color="white" />
                 </ListSidebarLink>
 
                 <!-- elearning saya -->
                 <ListSidebarLink title="Kelas Saya" route-name="apps.kelas.index" :border='true'>
-                    <IconMylearning />
+                    <IconMylearning color="white" />
                 </ListSidebarLink>
                 <ListSidebarLink title="Materi Bacaan" route-name="apps.materi.index" :border='false'>
-                    <IconMateri />
+                    <IconMateri color="white" />
                 </ListSidebarLink>
 
                 <!-- jobs dan event -->
                 <ListSidebarLink title="Event Saya" route-name="apps.event.index" :border='false'>
-                    <IconEvent />
+                    <IconEvent color="white" />
                 </ListSidebarLink>
                 <ListSidebarLink title="Kuliner & Destinasi" route-name="apps.kuliner.index" :border='false'>
-                    <IconTravel />
+                    <IconTravel color="white" />
                 </ListSidebarLink>
 
                 <!-- mini games -->
                 <ListSidebarLink title="Mini Games" route-name="apps.mini-games.index" :border='true'>
-                    <IconMylearning />
+                    <IconMylearning color="white" />
                 </ListSidebarLink>
                 <ListSidebarLink title="Mini Quiz" route-name="apps.mini-quiz.index" :border='false'>
-                    <IconMateri />
+                    <IconMateri color="white" />
                 </ListSidebarLink>
 
                 <!-- lainnya -->
                 <ListSidebarLink title="Lainnya" :border='true'>
-                    <IconLainnya />
+                    <IconLainnya color="white" />
                 </ListSidebarLink>
                 <ListSidebarLink title="Help Center" route-name="web.help-center.index" :border='false'>
-                    <IconHelpCenter />
+                    <IconHelpCenter color="white" />
                 </ListSidebarLink>
             </ul>
         </div>

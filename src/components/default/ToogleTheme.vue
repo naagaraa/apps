@@ -1,11 +1,11 @@
 <template>
-    <div class="hidden md:flex items-center ms-3">
+    <div class="md:flex items-center ms-3">
         <ButtonToogleTheme />
     </div>
 </template>
 
-<script lang="ts" setup>
-import ButtonToogleTheme from './button/ButtonToogleTheme.vue';
+<script lang="js" setup>
+import ButtonToogleTheme from '@/components/default/button/ButtonToogleTheme.vue';
 
 </script>
 

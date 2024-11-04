@@ -17,7 +17,9 @@ export default defineConfig({
         },
       },
     }),
-    vueDevTools(),
+    // vueDevTools({
+
+    // }),
     compression({
       algorithm: 'brotliCompress',
       exclude: '.br',
