@@ -11,7 +11,7 @@
 
 </template>
 
-<script lang="ts" setup>
+<script lang="js" setup>
 import ToogleTheme from '@/components/default/ToogleTheme.vue';
 import Notification from '@/components/default/Notification.vue';
 import TopUserProfile from '@/components/default/TopUserProfile.vue';

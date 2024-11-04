@@ -5,11 +5,13 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { obfuscator } from 'rollup-obfuscator'
 import compression from 'vite-plugin-compression2'
+import ssr from 'vite-plugin-ssr/plugin'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     obfuscator(),
+    // ssr(),
     vue({
       template: {
         compilerOptions: {
@@ -25,6 +27,9 @@ export default defineConfig({
       exclude: '.br',
     }),
   ],
+  ssr: {
+    noExternal: ['vue-router'], // Configure SSR-specific settings
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

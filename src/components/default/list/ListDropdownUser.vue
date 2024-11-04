@@ -1,8 +1,13 @@
 <template>
     <div>
         <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                role="menuitem">{{ props.title }}</a>
+            <RouterLink :to="{
+                name: 'apps.profile.show',
+                params: {
+                    id: 1
+                }
+            }" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                {{ props.title }}</RouterLink>
         </li>
     </div>
 </template>

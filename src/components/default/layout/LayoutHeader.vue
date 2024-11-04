@@ -30,7 +30,7 @@
     </nav>
 
 </template>
-<script setup lang="ts">
+<script setup lang="js">
 
 // vue
 import { computed } from 'vue';

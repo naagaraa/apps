@@ -6,7 +6,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="js">
 import ToogleTheme from '@/components/default/ToogleTheme.vue';
 
 </script>

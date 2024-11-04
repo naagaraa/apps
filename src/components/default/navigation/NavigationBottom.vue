@@ -3,42 +3,47 @@
         <div
             class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
             <div class="grid h-full max-w-lg grid-cols-5 mx-auto font-medium">
-                <ButtonBottomMenu title="Home">
+                <ButtonBottomMenu title="Home"
+                    color="text-black-400 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
                     <RouterLink :to="{
                         name: 'web.home'
                     }">
-                        <IconDashboard color="gray" size="w-5 h-5" />
+                        <IconDashboard color="black" size="w-4 h-4" />
                     </RouterLink>
                 </ButtonBottomMenu>
-                <ButtonBottomMenu title="Jobs">
+                <ButtonBottomMenu title="Jobs"
+                    color="text-gray-400 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
                     <RouterLink :to="{
                         name: 'apps.jobs.index'
                     }">
-                        <IconJobs color="gray" size="w-5 h-5" />
+                        <IconJobs color="gray" size="w-4 h-4" />
                     </RouterLink>
                 </ButtonBottomMenu>
-                <ButtonBottomMenu title="Event">
+                <ButtonBottomMenu title="Event"
+                    color="text-gray-400 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
                     <RouterLink :to="{
                         name: 'apps.event.index'
                     }">
-                        <IconTravel color="gray" size="w-5 h-5" />
+                        <IconTravel color="gray" size="w-4 h-4" />
                     </RouterLink>
                 </ButtonBottomMenu>
-                <ButtonBottomMenu title="Academy">
+                <ButtonBottomMenu title="Academy"
+                    color="text-gray-400 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
                     <RouterLink :to="{
                         name: 'apps.kelas.index'
                     }">
-                        <IconMylearning color="gray" size="w-5 h-5" />
+                        <IconMylearning color="gray" size="w-4 h-4" />
                     </RouterLink>
                 </ButtonBottomMenu>
-                <ButtonBottomMenu title="Profile">
+                <ButtonBottomMenu title="Profile"
+                    color="text-gray-400 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
                     <RouterLink :to="{
                         name: 'apps.profile.show',
                         params: {
                             id: 2
                         }
                     }">
-                        <IconProfile color="gray" size="w-5 h-5" />
+                        <IconProfile color="gray" size="w-4 h-4" />
                     </RouterLink>
                 </ButtonBottomMenu>
             </div>
