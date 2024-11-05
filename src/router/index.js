@@ -2,6 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/apps/HomeView.vue'
 import NotFoundView from '@/views/error/NotFound.vue'
 import HelpCenterView from '@/views/apps/help-center/HelpCenterView.vue'
+import NewsLetterView from '@/views/apps/NewsLetterView.vue'
+import JobsView from '@/views/apps/jobs/JobsView.vue'
+import JobsDetailView from '@/views/apps/jobs/JobsDetailView.vue'
+import EventView from '@/views/apps/event/EventView.vue'
+import EventDetailView from '@/views/apps/event/EventDetailView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,22 +29,22 @@ const router = createRouter({
     {
       path: '/news-letter',
       name: 'web.news-letter',
-      component: () => import('@/views/apps/NewsLetterView.vue'),
+      component: NewsLetterView,
     },
     {
       path: '/jobs',
       name: 'web.jobs',
-      component: () => import('@/views/apps/jobs/JobsView.vue'),
+      component: JobsView,
     },
     {
       path: '/jobs/:id',
       name: 'web.jobs.show',
-      component: () => import('@/views/apps/jobs/JobsDetailView.vue'),
+      component: JobsDetailView,
     },
     {
       path: '/event',
       name: 'web.event',
-      component: () => import('@/views/apps/event/EventView.vue'),
+      component: EventView,
     },
     {
       path: '/event/:id',
