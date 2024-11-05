@@ -9,7 +9,6 @@
                     </div>
                 </div>
                 <div id="filter-menu-teleport-component"></div>
-                <!-- <DropDownFilterSearch /> -->
             </section>
         </main>
     </div>
@@ -19,7 +18,7 @@
 import { computed } from 'vue'
 import { useAnnouncementStore } from '@/stores/useAnnouncementStore';
 import { useSidebarStore } from '@/stores/useSidebarStore';
-// import DropDownFilterSearch from '../dropdown/DropDownFilterSearch.vue';
+
 
 const useAnnouncement = useAnnouncementStore()
 const useSidebar = useSidebarStore()
