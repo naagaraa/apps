@@ -1,9 +1,11 @@
 <template>
     <!-- Dropdown menu -->
-    <div :class="filterMenuClass"
-        class="absolute bottom-0 md:hidden lg:hidden rounded-lg left-0 right-0 bg-green-400 divide-y shadow dark:bg-gray-800 dark:divide-gray-700">
-        <div class="divide-y px-8 py-10 mb-14 divide-gray-100 dark:divide-gray-700">
-            <slot />
+    <div v-if="isFilterShow">
+        <div :class="filterMenuClass"
+            class="absolute z-30 bottom-0 md:hidden lg:hidden rounded-t-lg left-0 right-0 bg-black text-white divide-y shadow dark:bg-gray-800 dark:divide-gray-700">
+            <div class="divide-y px-8 py-10 mb-14 divide-gray-100 dark:divide-gray-700">
+                <slot />
+            </div>
         </div>
     </div>
 

@@ -10,7 +10,7 @@
     </div>
 </template>
 
-<script lang="js" setup>
+<script lang="ts" setup>
 import IconFIlterSearch from './icons/IconFIlterSearch.vue';
 import { useFilterMenuStore } from '@/stores/useFilterMenuStore';
 

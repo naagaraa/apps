@@ -16,5 +16,5 @@
 import BannerHeader from '@/components/default/BannerHeader.vue';
 import CardMateri from '@/components/default/card/CardMateri.vue';
 import CardTravel from '@/components/default/card/CardTravel.vue';
-import BottomFilterMenu from '@/components/default/Bottom/BottomFilterMenu.vue'
+import BottomFilterMenu from '@/components/default/bottom/BottomFilterMenu.vue'
 </script>

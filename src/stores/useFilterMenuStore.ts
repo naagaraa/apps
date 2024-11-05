@@ -2,12 +2,15 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useFilterMenuStore = defineStore('filterMenu', () => {
-  const isShowFilterMenu = ref(true)
+  const isShowFilterMenu = ref(false)
   let viewKeyID = ref('')
 
   function toggleFilterMenu() {
     isShowFilterMenu.value = !isShowFilterMenu.value
-    console.log('Toggled isShowFilterMenu:', isShowFilterMenu.value)
+    console.log(
+      'Toggled ' + viewKeyID.value + ' isShowFilterMenu:',
+      isShowFilterMenu.value,
+    )
   }
 
   function applyKey(viewid: string) {

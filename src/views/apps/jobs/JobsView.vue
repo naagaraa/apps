@@ -6,5 +6,5 @@
 
 </template>
 <script setup lang="js">
-import BottomFilterMenu from '@/components/default/Bottom/BottomFilterMenu.vue'
+import BottomFilterMenu from '@/components/default/bottom/BottomFilterMenu.vue'
 </script>
