@@ -22,6 +22,6 @@ interface props {
 }
 
 let announcement = useAnnouncementStore();
-const props = defineProps<props>()
+defineProps<props>()
 
 </script>

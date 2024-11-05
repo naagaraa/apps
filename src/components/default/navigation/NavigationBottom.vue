@@ -52,10 +52,10 @@
 </template>
 
 <script setup lang="ts">
-import ButtonBottomMenu from '../button/ButtonBottomMenu.vue';
-import IconDashboard from '../icons/IconDashboard.vue';
-import IconJobs from '../icons/IconJobs.vue';
-import IconMylearning from '../icons/IconMylearning.vue';
-import IconProfile from '../icons/IconProfile.vue';
-import IconTravel from '../icons/IconTravel.vue';
+import ButtonBottomMenu from '@/components/default/button/ButtonBottomMenu.vue';
+import IconDashboard from '@/components/default/icons/IconDashboard.vue';
+import IconJobs from '@/components/default/icons/IconJobs.vue';
+import IconMylearning from '@/components/default/icons/IconMylearning.vue';
+import IconProfile from '@/components/default/icons/IconProfile.vue';
+import IconTravel from '@/components/default/icons/IconTravel.vue';
 </script>

@@ -1,5 +1,6 @@
 <template>
-    <div class="top-3 bg-slate-400 px-4 py-24 md:py-32 h-3 lg:flex md:h-1 lg:items-center">
+    <div :class="HeaderContainerClassBase"
+        class="top-3 bg-slate-400 px-4 py-24 md:py-32 h-3 lg:flex md:h-1 lg:items-center">
         <div :class="HeaderClassBase" class="text-start">
             <div class="pb-10">
                 <h1 class="mt-5 md:mt-10 bg-clip-text text-black text-3xl font-extrabold">
@@ -24,10 +25,13 @@ const useAuthentication = useAuthenticationStore()
 let isVisible = computed(() => useSidebar.isShow);
 let islogin = computed(() => useAuthentication.isAuth)
 let HeaderClassBase = computed(() => [
-    isVisible.value ? 'ml-0 md:ml-16' : '',
+    isVisible.value ? 'ml-0 md:ml-16' : 'md:ml-60',
     !islogin.value ? 'ml-0 md:ml-0' : ''
 ])
-
+let HeaderContainerClassBase = computed(() => [
+    // isVisible.value ? 'ml-0 md:ml-16' : '',
+    !islogin.value ? 'relative top-2' : ''
+])
 interface props {
     title?: string
     description?: string

@@ -58,8 +58,8 @@ import IconMateri from '@/components/default/icons/IconMateri.vue';
 import IconHelpCenter from '@/components/default/icons/IconHelpCenter.vue';
 import IconDashboard from '@/components/default/icons/IconDashboard.vue';
 import IconTravel from '@/components/default/icons/IconTravel.vue';
-import IconUdemy from '../icons/IconUdemy.vue';
-import IconEvent from '../icons/IconEvent.vue';
+import IconUdemy from '@/components/default/icons/IconUdemy.vue';
+import IconEvent from '@/components/default/icons/IconEvent.vue';
 
 // Create a reactive reference for isActive
 const useSidebar = useSidebarStore()
@@ -83,7 +83,5 @@ const dropdowns = reactive<Record<DropdownKeys, boolean>>({
 const toggleDropdown = (key: DropdownKeys) => {
     dropdowns[key] = !dropdowns[key];
 };
-
-
 
 </script>

@@ -12,5 +12,4 @@
 </template>
 <script setup lang="ts">
 import ListTopNavigation from '@/components/default/list/ListTopNavigation.vue';
-import SearchInput from '../SearchInput.vue';
 </script>

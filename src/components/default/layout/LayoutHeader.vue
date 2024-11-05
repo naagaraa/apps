@@ -1,6 +1,4 @@
 <template>
-
-
     <SideBar v-if="isLoggin" />
     <nav :class='classSidebarBase'
         class="fixed right-0 top-0 z-50  bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
@@ -63,7 +61,8 @@ let announcement = computed(() => useAnnouncement.isShow);
 
 // class base
 const classSidebarBase = computed(() => [
-    minibar.value ? 'left-0 sm:left-16' : 'left-0 sm:left-56'
+    minibar.value ? 'left-0 sm:left-16' : 'left-0 sm:left-56',
+    !isLoggin.value ? 'left-0 sm:left-0' : ''
 ])
 
 </script>
