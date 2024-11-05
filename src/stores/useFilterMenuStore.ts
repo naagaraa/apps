@@ -3,17 +3,31 @@ import { ref } from 'vue'
 
 export const useFilterMenuStore = defineStore('filterMenu', () => {
   const isShowFilterMenu = ref(true)
+  let viewKeyID = ref('')
 
   function toggleFilterMenu() {
-    if (isShowFilterMenu.value) {
+    isShowFilterMenu.value = !isShowFilterMenu.value
+    console.log('Toggled isShowFilterMenu:', isShowFilterMenu.value)
+  }
+
+  function applyKey(viewid: string) {
+    // Check if the new viewid is different from the current viewKeyID
+    if (viewKeyID.value !== viewid) {
+      // Set the new viewID
+      viewKeyID.value = viewid
+
+      // Set isShowFilterMenu to false initially when page changes
       isShowFilterMenu.value = false
     } else {
-      isShowFilterMenu.value = true
+      // If the viewID is the same, just toggle the visibility
+      toggleFilterMenu()
     }
   }
 
   return {
+    viewKeyID,
     isShowFilterMenu,
     toggleFilterMenu,
+    applyKey,
   }
 })

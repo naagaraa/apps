@@ -9,19 +9,39 @@
 
 </template>
 
-<script lang="js" setup>
+<script lang="ts" setup>
 import { useFilterMenuStore } from '@/stores/useFilterMenuStore';
-import { computed } from 'vue';
+import { computed, watch } from 'vue';
+
+const props = defineProps<{
+    viewKeyContainer: string
+}>()
 
 const useFilterMenu = useFilterMenuStore()
+
 let isFilterShow = computed(() => useFilterMenu.isShowFilterMenu)
 
+
+watch(
+    () => props.viewKeyContainer,
+    (newViewKey) => {
+        // value change on change view components
+        console.log(newViewKey);
+
+        // update key store
+        useFilterMenu.applyKey(newViewKey);
+        // isFilterShow.value = useFilterMenu.isShowFilterMenu;
+    },
+    {
+        immediate: true
+    }
+)
+
+
 const filterMenuClass = computed(() => [
-    isFilterShow.value ? 'inline-block    ' : 'hidden'
+    isFilterShow.value ? 'inline-block' : 'hidden'
 ]);
 
-
-console.log(useFilterMenu);
 
 </script>
 

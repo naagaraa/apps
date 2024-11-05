@@ -3,7 +3,7 @@
     <BannerHeader title="Beranda" description="Increase Your bussiness" />
   </Teleport>
   <Teleport to="#filter-menu-teleport-component">
-    <BottomFilterMenu title="Filter Menu Beranda" />
+    <BottomFilterMenu view-key="beranda" title="Filter Menu Beranda" />
   </Teleport>
   <h1 class="font-bold mb-10">Academy main</h1>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">

@@ -1,6 +1,6 @@
 <template>
     <Teleport to="#filter-menu-teleport-component">
-        <BottomFilterMenu title="Filter Menu Jobs" />
+        <BottomFilterMenu view-key="jobs" title="Filter Menu Jobs" />
     </Teleport>
     <h1 class="font-bold mb-10">Jobs List</h1>
 
