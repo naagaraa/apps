@@ -1,12 +1,8 @@
 <template>
-    <h1 class="font-bold mb-10">User Profile</h1>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">
-        <p>asdsa</p>
-        <ToogleTheme />
-    </div>
+  <h1 class="font-bold mb-10">User Profile</h1>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">
+    <p>Username</p>
+  </div>
 </template>
 
-<script setup lang="ts">
-import ToogleTheme from '@/components/default/ToogleTheme.vue';
-
-</script>
+<script setup lang="ts"></script>

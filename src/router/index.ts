@@ -6,7 +6,7 @@ import NewsLetterView from '@/views/apps/NewsLetterView.vue'
 import JobsView from '@/views/apps/jobs/JobsView.vue'
 import JobsDetailView from '@/views/apps/jobs/JobsDetailView.vue'
 import EventView from '@/views/apps/event/EventView.vue'
-import EventDetailView from '@/views/apps/event/EventDetailView.vue'
+import UserProfileView from '@/views/apps/users/UserProfileView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,7 +64,7 @@ const router = createRouter({
     {
       path: '/apps/event',
       name: 'apps.event.index',
-      component: () => import('@/views/apps/event/EventView.vue'),
+      component: EventView,
     },
     {
       path: '/apps/event/:id',
@@ -134,7 +134,7 @@ const router = createRouter({
     {
       path: '/apps/profile/:id',
       name: 'apps.profile.show',
-      component: () => import('@/views/apps/users/UserProfileView.vue'),
+      component: UserProfileView,
     },
   ],
 })

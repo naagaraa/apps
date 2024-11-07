@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 export const useFilterMenuStore = defineStore('filterMenu', () => {
   const isShowFilterMenu = ref(false)
-  let viewKeyID = ref('')
+  const viewKeyID = ref('')
 
   function toggleFilterMenu() {
     isShowFilterMenu.value = !isShowFilterMenu.value
@@ -13,17 +13,28 @@ export const useFilterMenuStore = defineStore('filterMenu', () => {
     )
   }
 
-  function applyKey(viewid: string) {
-    // Check if the new viewid is different from the current viewKeyID
-    if (viewKeyID.value !== viewid) {
-      // Set the new viewID
-      viewKeyID.value = viewid
+  function closeFilterMenu() {
+    isShowFilterMenu.value = !isShowFilterMenu.value
+    console.log(
+      'Toggled ' + viewKeyID.value + ' closed :',
+      isShowFilterMenu.value,
+    )
+  }
 
-      // Set isShowFilterMenu to false initially when page changes
+  function applyKey(viewid: string) {
+    console.log('params is', viewid)
+    console.log('ref is', viewKeyID.value)
+
+    // Always reset `isShowFilterMenu` to `false` when applying a new view ID
+    if (viewKeyID.value !== viewid) {
+      // viewKeyID.value = viewid
+      isShowFilterMenu.value = false // Reset the menu visibility when the page changes
+    } else if (isShowFilterMenu.value) {
+      // If the view ID is the same and the menu is already open, close it
       isShowFilterMenu.value = false
     } else {
-      // If the viewID is the same, just toggle the visibility
-      toggleFilterMenu()
+      // If the view ID is the same and the menu is closed, open it
+      isShowFilterMenu.value = false
     }
   }
 
@@ -31,6 +42,7 @@ export const useFilterMenuStore = defineStore('filterMenu', () => {
     viewKeyID,
     isShowFilterMenu,
     toggleFilterMenu,
+    closeFilterMenu,
     applyKey,
   }
 })
