@@ -1,7 +1,7 @@
 <template>
 
-    <div class="flex items-center">
-        <ToogleTheme />
+    <div class="flex items-center justify-center">
+        <!-- <ToogleTheme /> -->
         <FilterSearch />
         <Notification />
         <TopUserProfile>
