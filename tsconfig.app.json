@@ -5,8 +5,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/router/index.js",
-    "src/main.js"
+    "src/router/index.ts",
+    "src/main.ts"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {

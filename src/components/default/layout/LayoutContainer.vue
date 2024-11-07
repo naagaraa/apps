@@ -14,7 +14,7 @@
     </div>
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 import { computed } from 'vue'
 import { useAnnouncementStore } from '@/stores/useAnnouncementStore';
 import { useSidebarStore } from '@/stores/useSidebarStore';

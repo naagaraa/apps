@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<script lang="js" setup>
+<script lang="ts" setup>
 import ButtonToogleTheme from '@/components/default/button/ButtonToogleTheme.vue';
 
 </script>

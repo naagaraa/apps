@@ -32,6 +32,26 @@
         </div>
     </div>
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue';
 
-<script lang="js" setup>
+export default defineComponent({
+    data() {
+        return {
+            spaceBetween: 10, // or any default value
+        };
+    },
+    methods: {
+        onProgress(event: CustomEvent) {
+            // Handle the swiperprogress event here
+            console.log("Progress event triggered:", event.detail);
+        },
+        onSlideChange(event: CustomEvent) {
+            // Handle the swiperslidechange event here
+            console.log("Slide changed:", event.detail);
+        }
+    }
+});
+
 </script>
+>

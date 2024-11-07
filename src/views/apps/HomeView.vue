@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 import BannerHeader from '@/components/default/BannerHeader.vue';
 import CardMateri from '@/components/default/card/CardMateri.vue';
 import CardTravel from '@/components/default/card/CardTravel.vue';

@@ -28,7 +28,7 @@
     </nav>
 
 </template>
-<script setup lang="js">
+<script setup lang="ts">
 
 // vue
 import { computed } from 'vue';

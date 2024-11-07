@@ -5,8 +5,8 @@
     </button>
 </template>
 
-<script setup lang="js">
-import useTheme from "@/composables/useTheme.js"
+<script setup lang="ts">
+import useTheme from "@/composables/useTheme"
 const { isDarkMode, toggleTheme } = useTheme();
 </script>
 

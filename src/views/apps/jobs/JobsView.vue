@@ -5,6 +5,6 @@
     <h1 class="font-bold mb-10">Jobs List</h1>
 
 </template>
-<script setup lang="js">
+<script setup lang="ts">
 import BottomFilterMenu from '@/components/default/bottom/BottomFilterMenu.vue'
 </script>
