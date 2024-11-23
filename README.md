@@ -72,4 +72,11 @@ yarn preview
 bun run preview
 ```
 
+### Deploy pm2
+
+```
+# pm2
+pm2 start ecosystem.config.cjs
+```
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
